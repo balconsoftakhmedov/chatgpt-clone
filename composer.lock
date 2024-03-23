@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "26b79fabec031fd017886e332fe835c9",
+    "content-hash": "9f2830bbba925da439ee119b3fa96a5d",
     "packages": [
         {
             "name": "brick/math",
@@ -2286,21 +2286,21 @@
         },
         {
             "name": "openai-php/laravel",
-            "version": "dev-main",
+            "version": "v0.3.4",
             "source": {
                 "type": "git",
                 "url": "https://github.com/openai-php/laravel.git",
-                "reference": "21a336d6eb55f44a572f5ad3aaec93e38a1c3112"
+                "reference": "69aa5e110464c3742ed64ebd39ea3ccd9d4502e4"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/openai-php/laravel/zipball/21a336d6eb55f44a572f5ad3aaec93e38a1c3112",
-                "reference": "21a336d6eb55f44a572f5ad3aaec93e38a1c3112",
+                "url": "https://api.github.com/repos/openai-php/laravel/zipball/69aa5e110464c3742ed64ebd39ea3ccd9d4502e4",
+                "reference": "69aa5e110464c3742ed64ebd39ea3ccd9d4502e4",
                 "shasum": ""
             },
             "require": {
-                "laravel/framework": "^9.46.0|^10.1.5",
-                "openai-php/client": "^0.3.3",
+                "laravel/framework": "^9.46.0|^10.2.0",
+                "openai-php/client": "^0.3.4",
                 "php": "^8.1.0"
             },
             "require-dev": {
@@ -2311,7 +2311,6 @@
                 "phpstan/phpstan": "^1.10.3",
                 "symfony/var-dumper": "^6.2.7"
             },
-            "default-branch": true,
             "type": "library",
             "extra": {
                 "laravel": {
@@ -2352,7 +2351,7 @@
             ],
             "support": {
                 "issues": "https://github.com/openai-php/laravel/issues",
-                "source": "https://github.com/openai-php/laravel/tree/main"
+                "source": "https://github.com/openai-php/laravel/tree/v0.3.4"
             },
             "funding": [
                 {
@@ -2368,7 +2367,7 @@
                     "type": "patreon"
                 }
             ],
-            "time": "2023-03-03T14:45:36+00:00"
+            "time": "2023-03-03T19:54:05+00:00"
         },
         {
             "name": "phpoption/phpoption",
@@ -7978,14 +7977,12 @@
     ],
     "aliases": [],
     "minimum-stability": "stable",
-    "stability-flags": {
-        "openai-php/laravel": 20
-    },
+    "stability-flags": [],
     "prefer-stable": true,
     "prefer-lowest": false,
     "platform": {
         "php": "^8.1"
     },
     "platform-dev": [],
-    "plugin-api-version": "2.3.0"
+    "plugin-api-version": "2.6.0"
 }
