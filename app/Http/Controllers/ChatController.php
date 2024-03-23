@@ -12,6 +12,7 @@ use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Request;
 use Illuminate\Routing\Redirector;
 use OpenAI\Laravel\Facades\OpenAI;
+use Illuminate\Support\Facades\Log;
 
 /**
  * Chat controller to talk with the AI provider
@@ -43,12 +44,20 @@ class ChatController extends Controller
         $messages = $request->session()->get('messages', [
             ['role' => 'system', 'content' => 'You are LaravelGPT - A ChatGPT clone. Answer as concisely as possible.']
         ]);
+        $userMessage = $request->input('message');
+        $messages[] = ['role' => 'user', 'content' => $userMessage];
+         Log::info('User message', ['message' => $userMessage]);
 
-        $messages[] = ['role' => 'user', 'content' => $request->input('message')];
         $response = OpenAI::chat()->create([
             'model' => 'gpt-3.5-turbo',
             'messages' => $messages
         ]);
+
+         $assistantMessage = $response->choices[0]->message->content;
+
+    // Log the assistant's response
+        Log::info('Assistant response', ['response' => $assistantMessage]);
+
         $messages[] = ['role' => 'assistant', 'content' => $response->choices[0]->message->content];
         $request->session()->put('messages', $messages);
 
